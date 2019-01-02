@@ -1,0 +1,9 @@
+{
+    "port": 3000,
+    "auth0Api": {
+        "url": "YOUR_AUTH0_URL",
+        "clientId": "YOUR_AUTH0_CLIENTID",
+        "clientSecret": "YOUR_AUTH0_CLIENTSECRET",
+        "audience": "YOUR_AUTH0_AUDIENCE"
+    }
+}
