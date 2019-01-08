@@ -16,9 +16,14 @@ router.post('/email', (req, res, next) => {
   next()
 }, async (req, res, next) => {
   try {
-    const result = await auth0.updateEmail(req.accessToken, req.user.sub, req.body.email)
+    await auth0.updateEmail(req.accessToken, req.user.sub, req.body.email)
 
-    res.send(result)
+    res.send({
+      code: 200,
+      message: 'User email updated',
+      data: {},
+      meta: {}
+    })
   } catch (err) {
     next(err)
   }

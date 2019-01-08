@@ -27,7 +27,7 @@ module.exports = {
 
   async updateEmail (accessToken, id, email) {
     try {
-      const { data } = await axios.patch(
+      await axios.patch(
         `${config.domain}/api/v2/users/${id}`,
         {
           email: email,
@@ -55,8 +55,6 @@ module.exports = {
       ).catch(err => {
         console.log(err.response ? err.response.data : err)
       })
-
-      return data
     } catch (err) {
       throw err.response ? err.response.data : err
     }
